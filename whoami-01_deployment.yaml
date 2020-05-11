@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: whoami-ingress-deployment
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: whoami-ingress
+  template:
+    metadata:
+      labels:
+        app: whoami-ingress
+    spec:
+      containers:
+      - image: ctmagazin/whoami 
+        name: whoami-container
+        ports:
+        - containerPort: 80
