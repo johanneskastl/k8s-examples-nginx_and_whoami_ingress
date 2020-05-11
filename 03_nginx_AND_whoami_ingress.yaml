@@ -10,9 +10,9 @@ spec:
       paths:
         - path: /nginx
           backend:
-            serviceName: nginx-service
+            serviceName: nginx-ingress-service
             servicePort: 80
         - path: /whoami
           backend:
-            serviceName: whoami-service
+            serviceName: whoami-ingress-service
             servicePort: 80
